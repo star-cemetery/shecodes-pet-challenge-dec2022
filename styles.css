@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
+body {
+  background: linear-gradient(
+    113.5deg,
+    rgb(234, 234, 234) 22.3%,
+    rgb(201, 234, 211) 56.6%,
+    rgb(255, 180, 189) 90.9%
+  );
+
+  font-family: "Syne Mono", monospace;
+}
+.sticky {
+  position: relative;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 40px;
+  color: white;
+}
+.headline {
+  font-size: 50px;
+}
+.remark {
+  font-size: 25px;
+}
+.intro-text {
+  font-size: 20px;
+}
+.instaPic {
+  border-radius: 70%;
+  height: 150px;
+  width: 150px;
+  margin: 20px;
+}
+.instaPic:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.glow-on-hover {
+  width: 150px;
+  height: 60px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgb(250, 248, 248);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: rgb(243, 237, 237);
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.rock-bottom {
+  font-size: 20px;
+  text-align: center;
+}
+.miia {
+  position: relative;
+  right: 0;
+  height: 150px;
+  width: 150px;
+}
