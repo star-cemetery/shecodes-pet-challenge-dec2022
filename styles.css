@@ -10,7 +10,7 @@ body {
   font-family: "Syne Mono", monospace;
 }
 .sticky {
-  position: relative;
+  position: fixed;
   top: 0;
   margin: 0;
   padding: 0;
@@ -130,4 +130,26 @@ body {
   right: 0;
   height: 150px;
   width: 150px;
+}
+@media (max-width: 576px) {
+  .intro,
+  .remark {
+    display: none;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .intro {
+    display: contents;
+  }
+  .headline,
+  .remark {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .headline,
+  .intro,
+  .remark {
+    display: contents;
+  }
 }
